@@ -1,4 +1,6 @@
-﻿namespace WarcraftInterface;
+﻿using WarcraftInterface.Unit;
+
+namespace WarcraftInterface;
 
 internal partial class Program
 {
@@ -19,7 +21,12 @@ internal partial class Program
         var butterfly = new Knife();
         butterfly.Throw();
         butterfly.Fire();
+        butterfly.MeleeAttack();
 
+
+        Shooterman shooterman = new Shooterman();
+
+        shooterman.Fire();
 
     }
 
