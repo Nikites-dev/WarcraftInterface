@@ -1,7 +1,7 @@
-﻿namespace WarcraftInterface;
+﻿namespace WarcraftInterface {
 
-interface ISingleShootGun : IReloadWeapon
-{
-    public void SingleShoot();
+    interface ISingleShootGun : IReloadWeapon
+    {
+        public void SingleShoot();
+    }
 }
-

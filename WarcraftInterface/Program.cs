@@ -1,6 +1,7 @@
-﻿using WarcraftInterface.Unit;
+﻿using WarcraftInterface.Interface;
+using WarcraftInterface.Unit;
 
-namespace WarcraftInterface;
+namespace WarcraftInterface{
 
 internal partial class Program
 {
@@ -10,12 +11,12 @@ internal partial class Program
         makarov.Fire();
         makarov.AutoShoot();
         makarov.Reload();
-
+        
         var makarovSingle = (IWeapon)makarov;
-        //makarovSingle.Fire();
-
+        makarovSingle.Fire();
+        
         var makarovAuto = (IAutoShootGun)makarov;
-        // makarovAuto.AutoShoot();
+        makarovAuto.AutoShoot();
 
 
         var butterfly = new Knife();
@@ -23,11 +24,17 @@ internal partial class Program
         butterfly.Fire();
         butterfly.MeleeAttack();
 
+        var butterflyTrow = (IThrowWeapon) butterfly;
+        butterflyTrow.Throw();
+
+        var butterflyMelee = (IMeleeAttack) butterfly;
+        butterflyMelee.MeleeAttack();
 
         Shooterman shooterman = new Shooterman();
-
-        shooterman.Fire();
-
+        
+        shooterman.Fire(makarovSingle);
+        shooterman.Throw(butterflyTrow);
+        shooterman.Reload(makarovAuto);
     }
 
-}
+}}

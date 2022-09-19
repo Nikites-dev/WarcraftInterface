@@ -1,7 +1,9 @@
-﻿namespace WarcraftInterface;
+﻿namespace WarcraftInterface.Interface {
+    
+    public interface IThrowWeapon
+    {
+        public int ThrowDamage{ get; set; }
 
-
-interface IThrowWeapon
-{
-    void Throw();
+        public void Throw();
+    }
 }

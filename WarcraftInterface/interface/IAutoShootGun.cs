@@ -1,8 +1,7 @@
-﻿namespace WarcraftInterface;
-
-
-interface IAutoShootGun : IReloadWeapon
-{
-    public void AutoShoot();
+﻿namespace WarcraftInterface {
+    
+    interface IAutoShootGun : IReloadWeapon
+    {
+        public void AutoShoot();
+    }
 }
-

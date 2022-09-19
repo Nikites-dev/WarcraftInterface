@@ -1,4 +1,7 @@
-﻿namespace WarcraftInterface;
+﻿using System;
+using WarcraftInterface.Interface;
+
+namespace WarcraftInterface{
 
 internal partial class Program
 {
@@ -6,6 +9,7 @@ internal partial class Program
     {
         public int Damage { get; set; }
         public int State { get; set; }
+        public int ThrowDamage { get; set; }
 
         public Knife()
         {
@@ -28,4 +32,4 @@ internal partial class Program
         }
     }
 
-}
+}}

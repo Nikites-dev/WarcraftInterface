@@ -1,4 +1,6 @@
-﻿namespace WarcraftInterface;
+﻿using System;
+
+namespace WarcraftInterface{
 
 internal partial class Program
 {
@@ -29,18 +31,21 @@ internal partial class Program
 
         public void Fire()
         {
-            Console.WriteLine("ту!");
+            CurrentMagazineSize -= 1;
+            Console.WriteLine("ту!: "  + Convert.ToString(CurrentMagazineSize));
         }
 
         public void AutoShoot()
         {
-            Console.WriteLine("ту! ту! ту! ту!");
+            CurrentMagazineSize -= 4;
+            Console.WriteLine("ту! ту! ту! ту!"  + Convert.ToString(CurrentMagazineSize));
         }
 
         public void Reload()
         {
-            Console.WriteLine("пистолет перезаряжен!");
+            CurrentMagazineSize = MaxMagazineSize;
+            Console.WriteLine(GetType().Name + " перезаряжен!: " + CurrentMagazineSize);
         }
     }
 
-}
+}}
